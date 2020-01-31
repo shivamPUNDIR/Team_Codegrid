@@ -1,0 +1,8243 @@
+<!DOCTYPE html>
+
+
+<html lang="en" class="no-js" prefix="lc: http://loc.gov/#">
+
+<!-- Mirrored from www.loc.gov/careers/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2020 15:06:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="version" content="$Revision$"/>
+<meta name="msvalidate.01" content="5C89FB9D99590AB2F55BD95C3A59BD81"/>
+<link title="schema(DC)" rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
+<meta name="dc.language" content="eng" />
+<meta name="dc.source" content="Library of Congress, Washington, D.C. 20540 USA" />
+
+
+    <link rel="alternate" type="application/json" href="https://www.loc.gov/careers/?fo=json" />
+
+
+<meta property="fb:admins" content="libraryofcongress"/>
+<meta property="og:site_name" content="The Library of Congress"/>
+<meta property="og:type" content="article" />
+
+
+
+
+
+
+    
+        <title>Careers at the Library of Congress, Available Online | Library of Congress</title>
+        <meta name="dc.title" content="Search results from Careers at the Library of Congress, Available Online" />
+        <meta property="og:title" content="Search results from Careers at the Library of Congress, Available Online" />
+    
+
+    
+        <meta name="description" content="Search results 1 - 32 of 32." />
+        <meta property="og:description" content="Search results 1 - 32 of 32." />
+    
+
+    <meta name="dc.identifier" content="https://www.loc.gov/careers/" />
+
+    
+        
+            <meta name="dc.relation.isPartOf" content="careers at the library of congress" />
+        
+    
+        
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+
+
+
+
+
+
+
+
+<!-- final fallback for pages with no media -->
+<meta property="og:image" content='http://www.loc.gov/static/images/favicons/open-graph-logo.png?123456789.-1' />
+<meta property="og:image:secure_url" content='https://www.loc.gov/static/images/favicons/open-graph-logo.png?123456789.-1' />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+
+
+
+    
+
+
+
+
+<link href='https://www.loc.gov/static/stylesheets/base.css?123456789.-1'
+      type='text/css'
+      rel="stylesheet"/>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+
+
+
+<script type="text/javascript"
+    src='https://www.loc.gov/static/js/lib/jquery-1.8.2.js'></script>
+
+
+    
+
+<script type="text/javascript">
+/**
+ * Timing.js 1.0.4
+ * Copyright 2015 Addy Osmani
+ */
+(function(window) {
+    'use strict';
+
+    /**
+     * Navigation Timing API helpers
+     * timing.getTimes();
+     **/
+    window.timing = window.timing || {
+        /**
+         * Outputs extended measurements using Navigation Timing API
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         * @return Object      measurements
+         */
+        getTimes: function(opts) {
+            var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;
+
+            if (performance === undefined) {
+                return false;
+            }
+
+            var timing = performance.timing;
+            var api = {};
+            opts = opts || {};
+
+            if (timing) {
+                if(opts && !opts.simple) {
+                    for (var k in timing) {
+                        // hasOwnProperty does not work because properties are
+                        // added by modifying the object prototype
+                        if(isNumeric(timing[k])) {
+                            api[k] = parseFloat(timing[k]);
+                        }
+                    }
+                }
+
+
+                // Time to first paint
+                if (api.firstPaint === undefined) {
+                    // All times are relative times to the start time within the
+                    // same objects
+                    var firstPaint = 0;
+
+                    // Chrome
+                    if (window.chrome && window.chrome.loadTimes) {
+                        // Convert to ms
+                        firstPaint = window.chrome.loadTimes().firstPaintTime * 1000;
+                        api.firstPaintTime = firstPaint - (window.chrome.loadTimes().startLoadTime*1000);
+                    }
+                    // IE
+                    else if (typeof window.performance.timing.msFirstPaint === 'number') {
+                        firstPaint = window.performance.timing.msFirstPaint;
+                        api.firstPaintTime = firstPaint - window.performance.timing.navigationStart;
+                    }
+                    // Firefox
+                    // This will use the first times after MozAfterPaint fires
+                    //else if (window.performance.timing.navigationStart && typeof InstallTrigger !== 'undefined') {
+                    //    api.firstPaint = window.performance.timing.navigationStart;
+                    //    api.firstPaintTime = mozFirstPaintTime - window.performance.timing.navigationStart;
+                    //}
+                    if (opts && !opts.simple) {
+                        api.firstPaint = firstPaint;
+                    }
+                }
+
+                // Total time from start to load
+                api.loadTime = timing.loadEventEnd - timing.fetchStart;
+                // Time spent constructing the DOM tree
+                api.domReadyTime = timing.domComplete - timing.domInteractive;
+                // Time consumed preparing the new page
+                api.readyStart = timing.fetchStart - timing.navigationStart;
+                // Time spent during redirection
+                api.redirectTime = timing.redirectEnd - timing.redirectStart;
+                // AppCache
+                api.appcacheTime = timing.domainLookupStart - timing.fetchStart;
+                // Time spent unloading documents
+                api.unloadEventTime = timing.unloadEventEnd - timing.unloadEventStart;
+                // DNS query time
+                api.lookupDomainTime = timing.domainLookupEnd - timing.domainLookupStart;
+                // TCP connection time
+                api.connectTime = timing.connectEnd - timing.connectStart;
+                // Time spent during the request
+                api.requestTime = timing.responseEnd - timing.requestStart;
+                // Request to completion of the DOM loading
+                api.initDomTreeTime = timing.domInteractive - timing.responseEnd;
+                // Load event time
+                api.loadEventTime = timing.loadEventEnd - timing.loadEventStart;
+            }
+
+            return api;
+        },
+        /**
+         * Uses console.table() to print a complete table of timing information
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         */
+        printTable: function(opts) {
+            var table = {};
+            var data  = this.getTimes(opts) || {};
+            Object.keys(data).sort().forEach(function(k) {
+                table[k] = {
+                    ms: data[k],
+                    s: +((data[k] / 1000).toFixed(2))
+                };
+            });
+            console.table(table);
+        },
+        /**
+         * Uses console.table() to print a summary table of timing information
+         */
+        printSimpleTable: function() {
+            this.printTable({simple: true});
+        }
+    };
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    // Expose as a commonjs module
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = window.timing;
+    }
+
+})(typeof window !== 'undefined' ? window : {});
+;;
+</script>
+<script type="text/javascript">
+// Stub window.loc_ux_tracking so we dont have to riddle the pages
+// with if(window.loc_ux_tracking) everywhere.  Also create an alias
+// `UX`
+jQuery(function($){
+    if(!window.loc_ux_tracking){
+        window.loc_ux_tracking = {
+            trackFileDownloadEvent: function(){},
+            trackUserInteractionEvent: function(){},
+            trackUserInterfaceAction: function(){},
+        }
+    }
+    window.UX = window.loc_ux_tracking;
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    function getMediaPosition(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function 
+         * wwas created in order to get the current position in a video.
+         *
+         * getMediaPosition() returns the current position in the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getPosition();
+            }
+            case 'mediaElement': {
+                return player.getCurrentTime();
+            }
+        }
+        return null;
+    }
+
+
+    function getMediaDuration(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function 
+         * wwas created in order to get the length of a video.
+         *
+         * getMediaPosition() returns the length of the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getDuration();
+            }
+            case 'mediaElement': {
+                return player.duration;
+            }
+        }
+        return null;
+    }
+
+    /*
+    function mediaPlayerInterface(player, playerType) {
+        // given the media player type, this function will modify the objects such that the methods
+        // called in track_player are the same for both jwPlayer and mediaElement
+        switch(playerType) {
+            case 'jwPlayer': {
+                // Want to mimic the jwPlayers functions so if jwPlayer do nothing
+                break;
+            }
+            case 'mediaElement': {
+                player.getPosition = function() {
+                    return player.getCurrentTime();
+                }
+
+                player.getDuration = function() {
+                    return player.duration;
+                }
+                break;
+            }
+        }
+        return player;
+    }
+    */
+
+    // Register calls to Adobe for metrics tracking
+    $.omniture = UX.track_player = function(player, playerType, shortName, isVideo) {
+        
+        player.type = playerType; 
+        var eventData = {
+            player: player,
+            shortName: shortName
+        };
+        eventData.mediaType = isVideo ? 'video' : 'audio';
+
+
+        switch(playerType) {
+            case 'jwPlayer': {
+                player.on('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            case 'mediaElement': {
+                player.addEventListener('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            default:
+                break;
+        }
+
+    };
+
+    //Handle various media events and send data to Adobe. This also sends data to the legacy locjukebox reporting suite
+    function handleMediaEvent(event, eventData) {
+        if (typeof s != "undefined") {
+            var player = eventData.player;
+            var mediaName = eventData.shortName;
+            var mediaType = eventData.mediaType;
+            var mediaPlayerName = "LOC JW Player";
+            var mediaOffset = 0;
+            var legacyTracking = s_gi('locjukebox');
+
+            legacyTracking.trackingServer = s.trackingServer;
+            legacyTracking.prop4 = mediaName;
+
+            if (getMediaPosition(player) > 0) {
+                mediaOffset = Math.floor(getMediaPosition(player));
+            }
+            switch (event.type) {
+                case 'play':
+                    if (mediaOffset == 0) {
+                        setTimeout(function() {
+                            s.Media.open(mediaName, getMediaDuration(player), mediaPlayerName);
+                            s.Media.play(mediaName, mediaOffset);
+                            legacyTracking.prop8 = "[Button Click] - Start " + mediaType;
+                            legacyTracking.tl();
+                            console.log('play event fired off');
+                        }, 500);
+                    }
+                    else {
+                        s.Media.play(mediaName, mediaOffset);
+                        legacyTracking.prop8 = "[Button Click] - Resume " + mediaType;
+                        legacyTracking.tl();
+                    }
+                    break;
+
+                case 'seeked':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.play(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Scrub] - Specific Point in " + mediaType + " Clip";
+                    legacyTracking.tl();
+                    console.log('seek event fired off');
+                    break;
+
+                case 'pause':
+                    s.Media.stop(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Button Click] - Pause " + mediaType;
+                    legacyTracking.tl();
+                    console.log('pause event fired off');
+                    break;
+                case 'seeking':
+                    s.Media.stop(mediaName, mediaOffset);
+                    console.log('seeking event fired off');
+                    break;
+                case 'buffer':
+                case 'idle':
+                    break;
+
+                case 'complete':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.close(mediaName);
+                    mediaOffset = 0;
+                    legacyTracking.prop8 = "[End Clip] - " + mediaType;
+                    legacyTracking.tl();
+                    break;
+            }
+        }
+    }
+});
+
+// General analytics properties.  Adobe will inspect the global scope
+// and execute this function if it finds it.
+var doPageMetricsPlugin = function(s){
+
+    // window.UX = window.loc_ux_tracking;  // This resets the UX object removing track_player causing a bug for the video player
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    /* application title: prop10 */
+    s.prop10 = "Project One";
+
+    /* error page report */
+    
+
+    s.prop15 = "";
+    s.prop16 = "";
+    s.prop18 = ""; // Start Date
+    s.prop19 = ""; // End Date
+    s.prop20 = false; // Front page only
+    /* page title: prop21 */
+    
+    //Managed content page/article title
+        s.prop21 = 'Current Openings';
+    
+    // Basic or Advanced
+    
+        s.prop15 = 'basic';
+    
+    //Start date
+    
+    //End Date
+    
+    //Front page only
+    
+        s.prop20 = false;
+    
+    /* system identifier: prop20 */
+    /*
+    
+    */
+    /* page identifier: prop11 */
+    // metrics item page identifier is unique id plus readable title.  This
+    // needs help getting cleaned up using site_type/site_id/resource/title?
+    // - from item/metrics.html
+    // - from managed_content/metrics.html
+    
+        s.prop11 = '/careers/ - Careers at the Library of Congress';
+    
+
+    //Set title, same across supporting material like about-this-thing, search
+    //results within the set as the content, articles and essays etc.
+    
+    s.prop12 = 'Careers at the Library of Congress';
+    
+
+    s.prop22 = 0.166023015976;//backend duration
+
+
+    // Assigning specific search options for selected search facets
+    s.prop23 = "";// suggested
+    s.prop24 = "";// digitized
+    s.prop25 = "";// original format
+    s.prop26 = "";// online format
+    s.prop27 = "";// date
+    s.prop28 = "";// part of
+    s.prop29 = "";// contributor
+    s.prop30 = "";// subject
+    s.prop31 = "";// site_id -> picked up by prop62
+    s.prop32 = "";// location
+    s.prop33 = "careers";// site_type -> picked up by prop61
+    s.prop34 = "";// site_path (options.resource) can be longer than 2 segments
+    s.prop35 = "";// language
+    s.prop36 = "";// results view type
+    
+    s.prop37 = 'partof:careers at the library of congress';// searchIn
+    s.prop38 = "https://www.loc.gov/careers/";// path_info
+    s.prop39 = "";//truncated query string
+    s.prop40 = '50';// count
+    s.prop41 = "date asc";// sort
+    s.prop44 = "";// searchTerms
+    s.prop45 = "";
+    s.prop46 = "";// qs-adv-search-kw
+    s.prop47 = '';// startPage
+    s.prop67 = "";// access condition
+
+    /* original format: prop49 */
+    
+    s.prop49 = 'Web Pages';
+    
+    s.prop50 = "";
+    // The following two props aren't needed currently
+    //s.prop51 = "";// facetLimits
+    //s.prop52 = "";// field
+    s.prop53 = "";// facetPrefix
+    s.prop54 = "";// fullText
+    s.prop55 = "";// download
+    s.prop56 = ""; // partof_collection
+    s.prop57 = ""; // number_page
+    s.prop60 = 123456789;//release_id
+    s.prop69 = ""; // location_state
+    s.prop70 = ""; //location_county
+    s.prop71 = ""; //language
+    // Combined Facets - yuck, should be deprecated soon
+    // TODO: This means we need a s.prop for "digitized"
+    //       aka "available online".
+    s.prop48 = "Facet[Digitized]-(false) ";
+    /*
+    /* Advanced Search display level */
+    
+        s.prop16 = "None";
+    
+
+    /* Advanced Search Parameter */
+    
+    /* Query String */
+    
+
+    /* Partof Title */
+    
+
+    /* Partof_Division */
+    
+    /* Partof_Collection */
+    
+    /* number_page */
+    
+
+    /* Location country */
+    
+
+    /* Location state */
+    
+
+    /* Language */
+    
+
+    
+
+    // get facet info from url string
+    var name,
+        value,
+        search_facets = [{
+            "facet": "Part of",
+            "value": "careers at the library of congress"
+        },{
+            "facet": "Available Online",
+            "value": "digitized"
+        }];
+
+    // This page represents search results so set props based on options and facet_trail
+    s.prop24 = "available online";// digitized
+
+    for(var i=0; i < search_facets.length; i++){
+
+        name = search_facets[i].facet.toLowerCase();
+        value = search_facets[i].value.toLowerCase();
+
+        switch(name){
+
+            /* INCLUSION FILTERS */
+            case 'original format':
+                s.prop25 += value + '|';
+                s.prop48 += 'Facet[OriginalFormats]-('+value+') ';
+                break;
+            case 'online format':
+                s.prop26 += value + '|';
+                s.prop48 += 'Facet[OnlineFormats]-('+value+') ';
+                break;
+            case 'part of':
+                s.prop28 += value + '|';
+                s.prop48 += 'Facet[PartOf]-('+value+') ';
+                break;
+            case 'contributor':
+                s.prop29 += value + '|';
+                s.prop48 += 'Facet[Contributors]-('+value+') ';
+                break;
+            case 'subject':
+                s.prop30 += value + '|';
+                s.prop48 += 'Facet[Subjects]-('+value+') ';
+                break;
+            case 'site':
+                s.prop48 += 'Facet[Sites]-('+value+') ';
+                break;
+            case 'date':
+                s.prop27 += value + '|';
+                s.prop48 += 'Facet[Dates]-('+value+') ';
+                break;
+            case 'location':
+                s.prop32 += value + '|';
+                s.prop48 += 'Facet[Locations]-('+value+') ';
+                break;
+            case 'language':
+                s.prop35 += value + '|';
+                s.prop48 += 'Facet[Languages]-('+value+') ';
+                break;
+            case 'access condition':
+                if (value == 'true') {
+                    s.prop67 = 'available at LOC campus';
+                } else {
+                    s.prop67 = 'available online'
+                }
+                s.prop48 += 'Facet[AccessRestricted]-('+value+') ';
+                break;
+
+            /* EXCLUSION FILTERS - not supported by the UI but occasionally used by pros */
+            case 'original format!':
+                s.prop48 += 'Facet[OriginalFormatsExcluded]-('+value+') ';
+                break;
+            case 'online format!':
+                s.prop48 += 'Facet[OnlineFormatsExcluded]-('+value+') ';
+                break;
+            case 'contributor!':
+                s.prop48 += 'Facet[ContributorsExcluded]-('+value+') ';
+                break;
+            case 'date!':
+                s.prop48 += 'Facet[DatesExcluded]-('+value+') ';
+                break;
+            case 'site!':
+                s.prop48 += 'Facet[SitesExcluded]-('+value+') ';
+                break;
+            case 'subject!':
+                s.prop48 += 'Facet[SubjectsExcluded]-('+value+' )';
+                break;
+            case 'location!':
+                s.prop48 += 'Facet[LocationsExcluded]-('+value+') ';
+                break;
+            case 'language!':
+                s.prop48 += 'Facet[LanguagesExcluded]-('+value+') ';
+                break;
+            case 'access condition!':
+                s.prop48 += 'Facet[AccessRestricted]-('+value+') ';
+                break;
+        }
+    }
+    
+
+
+    return s;
+};
+</script>
+
+
+
+
+    
+<meta name="msapplication-TileColor"
+      content="#ffffff" />
+<meta name="msapplication-TileImage"
+      content='ms-icon-144x144.png?123456789.-1' />
+
+
+<link rel='alternate'
+      type='text/html'
+      href='https://www.loc.gov/careers/'/>
+
+
+
+<link rel='alternate'
+      type='application/json'
+      href='https://www.loc.gov/careers/?fo=json'/>
+
+
+<link title="Library of Congress Search"
+      href='https://www.loc.gov/search/opensearch.xml'
+	  rel="search"
+	  type="application/opensearchdescription+xml" />
+
+
+</head>
+<body>
+<div id='body' class='
+     
+        careers-body
+        
+        portal-body 
+        
+        
+        default-resource-body
+        
+    
+    '>
+<a class="skip-nav"
+   href="#skip-to-content">Skip to main content</a>
+
+
+
+
+
+<style>.header-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  background-color: #000000;
+  /* fallback */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header {
+  background-color: #fff;
+  border-top: 4px solid #FC4C02;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+  z-index: 999;
+}
+.header-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+@media (min-width: 993px) {
+  .header-row {
+    align-items: flex-end;
+  }
+}
+</style>
+
+
+<header class="header" role="banner">
+    <div class="header-container">
+        <div class="header-row">
+            
+            
+
+
+<style>.header-logo {
+  width: 161px;
+}
+@media (min-width: 993px) {
+  .header-logo {
+    width: 363px;
+    padding: 25px 0;
+  }
+}
+.header-logo > a {
+  display: block;
+  width: 363px;
+  height: 90px;
+}
+.header-logo > a > img {
+  width: 100%;
+  height: auto;
+}
+.header-logo > a > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .header-logo > a {
+    width: 161px;
+    height: 40px;
+  }
+}
+@media print {
+  .header-logo > a {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header-logo {
+    padding: 0;
+  }
+}
+@media print {
+  .header-logo {
+    padding: 1rem 0;
+    height: 68px;
+    display: block;
+  }
+  .header-logo:after {
+    content: url("https://www.loc.gov/static/images/logo-loc-new-branding.svg?74629");
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-logo a').live('click', function() {
+        UX.interaction($(this), 'LC Logo', 'Click', '');
+    });
+
+});
+</script>
+
+
+<div class="header-logo">
+    <a href="https://www.loc.gov/">
+        <img src="https://www.loc.gov/static/images/logo-loc-new-branding.svg" alt="" />
+        <span>Library of Congress</span>
+    </a>
+</div>
+
+            
+            
+            
+
+
+<style>.header-search {
+  flex: 1 1 0%;
+  padding-left: 30px;
+}
+@media (min-width: 993px) {
+  .header-search {
+    padding: 25px 0 25px 210px;
+  }
+}
+.header-search > form {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    flex: 1 0 100%;
+  }
+}
+.header-search > form .header-search-formats {
+  position: relative;
+  color: #000;
+  border-bottom: 1px solid #000;
+  flex: 0 0 100%;
+}
+@media (min-width: 481px) {
+  .header-search > form .header-search-formats {
+    flex: none;
+    border: none;
+  }
+}
+.header-search > form .header-search-formats:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+.header-search > form .header-search-formats .header-search-format-select {
+  border: none;
+  height: 30px;
+  width: 100%;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-formats .header-search-format-select {
+    font-size: 16px;
+  }
+}
+.header-search > form .header-search-formats .header-search-format-select::-ms-expand {
+  display: none;
+}
+.header-search > form .header-search-formats .header-search-format-select:hover,
+.header-search > form .header-search-formats .header-search-format-select:focus {
+  box-shadow: inset 0 0 3px #000 !important;
+}
+.header-search > form .header-search-input-wrapper {
+  flex: 1 1 1%;
+  position: relative;
+}
+.header-search > form .header-search-input-wrapper .header-search-input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-left: 1px solid #000;
+  height: 30px;
+  line-height: 30px;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-input-wrapper .header-search-input {
+    font-size: 16px;
+    border: none;
+  }
+}
+.header-search > form .header-search-input-wrapper .header-search-input:focus {
+  box-shadow: inset 0 0 3px #999 !important;
+}
+.header-search > form .header-search-button {
+  height: 30px;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search > form .header-search-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.header-search > form .header-search-button .icon {
+  line-height: inherit;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    display: none;
+  }
+  .header-search > form.header-search-form-active {
+    display: flex;
+  }
+}
+.header-search .header-search-toggle {
+  display: none;
+  height: 32px;
+  font-size: 1.25rem;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search .header-search-toggle span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 768px) {
+  .header-search .header-search-toggle {
+    display: inline-block;
+    float: right;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close {
+    background-color: transparent;
+    border-color: transparent;
+    color: #00618e;
+    font-size: 36px;
+    color: #FC4C02;
+    height: auto;
+    flex: none;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close:hover,
+  .header-search .header-search-toggle.header-search-toggle-close:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: #002347;
+  }
+}
+@media (max-width: 768px) {
+  .header-search {
+    min-height: 32px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  .header-search.header-search-close {
+    padding: 0 55px 0 1rem !important;
+    z-index: 2;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media print {
+  .header-search {
+    display: none;
+  }
+}
+/* autocomplete */
+.autocomplete-w1 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  margin: 0;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.autocomplete {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-top-color: transparent;
+  background-color: #fff;
+  cursor: default;
+  text-align: left;
+  max-height: 350px;
+  overflow: auto;
+  margin: 0;
+}
+.autocomplete .selected {
+  background: #efefef;
+}
+.autocomplete div {
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+.autocomplete strong {
+  font-weight: normal;
+  color: #00618e;
+}
+.autocomplete-status {
+  font-weight: normal;
+  font-size: 10px;
+  float: right;
+  text-align: right;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-search-format-select').change(function() {
+        var label;
+        $('.header-search-format-select option:selected').each(function() {
+            label = $(this).text().trim();
+        });
+        UX.interaction($(this), 'Search', 'Select Format', label);
+    });
+    // search toggle
+    function searchActive() {
+        $('.header-search > form').addClass('header-search-form-active');
+        $('.header-search .header-search-input').focus();
+        $('.header-search-toggle i').switchClass('icon-search', 'icon-times', 50);
+        $('.header-search-toggle').addClass('header-search-toggle-close');
+        $('.header-search').addClass('header-search-close');
+    };
+    function searchInactive() {
+        $('.header-search > form').removeClass('header-search-form-active');
+        $('.header-search-toggle i').switchClass('icon-times', 'icon-search', 50);
+        $('.header-search-toggle').removeClass('header-search-toggle-close');
+        $('.header-search').removeClass('header-search-close');
+    };
+
+    $('.header-search-toggle').live('click', function() {
+        if ($('.header-search > form').hasClass('header-search-form-active')) {
+            searchInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Hide', '');
+        } else {
+            searchActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Show', '');
+        }
+    });
+
+    $(window).on("load resize",function(e){
+        $('.autocomplete-w1').parent().css('width', '100%');
+    });
+
+});
+</script>
+
+
+<div class="header-search">
+    <label for="search"
+        class="test screen-readers-only">Search</label>
+    
+    
+<form role="search" method="get" action="https://www.loc.gov/search/">
+    <div class="header-search-formats">
+        <select name="in"
+                id="searchFormat"
+                aria-label="search"
+                class="header-search-format-select">
+            <option value="">Everything</option>
+
+            
+            <option value="original-format:sound recording"
+                
+                    >Audio Recordings</option>
+            
+            <option value="original-format:book"
+                
+                    >Books/Printed Material</option>
+            
+            <option value="original-format:film, video"
+                
+                    >Films, Videos</option>
+            
+            <option value="original-format:legislation"
+                
+                    >Legislation</option>
+            
+            <option value="original-format:manuscript/mixed material"
+                
+                    >Manuscripts/Mixed Material</option>
+            
+            <option value="original-format:map"
+                
+                    >Maps</option>
+            
+            <option value="original-format:notated music"
+                
+                    >Notated Music</option>
+            
+            <option value="original-format:newspaper"
+                
+                    >Newspapers</option>
+            
+            <option value="original-format:periodical"
+                
+                    >Periodicals</option>
+            
+            <option value="original-format:personal narrative"
+                
+                    >Personal Narratives</option>
+            
+            <option value="original-format:photo, print, drawing"
+                
+                    >Photos, Prints, Drawings</option>
+            
+            <option value="original-format:software, e-resource"
+                
+                    >Software, E-Resources</option>
+            
+            <option value="original-format:archived web site"
+                
+                    >Archived Web Sites</option>
+            
+            <option value="original-format:web page"
+                
+                    >Web Pages</option>
+            
+            <option value="original-format:3d object"
+                
+                    >3D Objects</option>
+            
+            
+            <option value='partof:careers at the library of congress'
+                selected="selected"
+            >Careers at the Library of Congress</option>
+            
+        </select>
+    </div>
+    <div class='header-search-input-wrapper'>
+        <input  type="search"
+                title="Search the Library of Congress"
+                placeholder="Search Loc.gov"
+                name="q"
+                id="search"
+                class='locsuggest header-search-input'
+                maxlength="250"
+                value=''
+                onFocus="this.select();"
+                accesskey="/"/>
+        <div class='searchtarget'>
+            <input id='search_within_default'
+                type="hidden"
+                name="new"
+                value="true" />
+        </div>
+    </div>
+    <button class="header-search-button"
+            type="submit"
+            value="submit"><span>Search</span><i
+            class="icon icon-search"></i></button>
+
+    
+    <input type='hidden'
+        name='st'
+        value=''/>
+    
+    
+</form>
+
+    
+    <button class="header-search-toggle"><span>Search toggle</span><i
+        class="icon icon-search"></i></button>
+</div>
+
+            
+            
+            
+
+
+<style>.header-menu {
+  position: relative;
+}
+@media (min-width: 769px) {
+  .header-menu {
+    padding-left: 15px;
+  }
+}
+.header-menu .header-menu-button {
+  color: #000;
+  border: 0;
+  background: none;
+  font-size: 36px;
+  width: 31px;
+  height: 70px;
+  line-height: 1;
+  padding: 0 15px;
+  margin-right: -15px;
+  box-sizing: content-box;
+}
+.header-menu .header-menu-button .icon-times {
+  color: #FC4C02;
+}
+.header-menu .header-menu-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-button {
+    height: auto;
+    line-height: normal;
+    padding: 9px 15px 18px;
+  }
+}
+.header-menu.header-menu-active .header-menu-button {
+  background: #efefef;
+}
+.header-menu .header-menu-container {
+  display: none;
+  background: #efefef;
+  position: absolute;
+  top: auto;
+  right: -15px;
+  z-index: 999;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-container {
+    top: auto;
+  }
+}
+.header-menu .header-menu-container.header-menu-container-active {
+  display: block;
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+}
+.header-menu .header-menu-container > ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 53px 0 2rem;
+}
+ul .header-menu .header-menu-container > ul {
+  padding-left: 40px;
+}
+@media (min-width: 481px) {
+  .header-menu .header-menu-container > ul {
+    padding: 0 153px 0 2rem;
+  }
+}
+.header-menu .header-menu-container > ul a {
+  color: #333;
+}
+.header-menu .header-menu-container > ul > li {
+  padding: 0.5rem 50px 0.5rem 0;
+  white-space: nowrap;
+}
+.header-menu .header-menu-container > ul > li:first-child {
+  padding-top: 1rem;
+}
+.header-menu .header-menu-container > ul > li:last-child {
+  padding-bottom: 1rem;
+}
+.header-menu .header-menu-container > ul.header-menu-tertiary > li:first-child,
+.header-menu .header-menu-container > ul.header-menu-external > li:first-child {
+  border-top: 1px solid #999;
+}
+@media print {
+  .header-menu {
+    display: none;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    $('.header-menu-link a.menu-link').live('click', function () {
+        $('.header-submenu, .header-menu, .header-menu-link').toggleClass('on-off');
+    });
+    var delay = 800,
+        global_nav_header_timeout;
+    $('.header-menu li').live('hover', function(event) {
+        $('.header-dropdown img').each(function(index, image){
+            var data_source = $(image).attr('data-src');
+            if(data_source){
+                $(image).attr({src: data_source, 'data-src': null});
+            }
+        });
+
+        if( $(event.target).parents('.hover').length ){
+            return;
+        }
+
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).closest('li').addClass('hover');
+        global_nav_header_timeout = setTimeout(function(){
+            $('.header-dropdown').hide();
+            $('.header-dropdown', $(event.target).closest('li')).show();
+        }, delay);
+    }, function(event){
+        clearTimeout( global_nav_header_timeout );
+        $(event.target).closest('li').removeClass('hover');
+        $('.header-dropdown', $(event.target).closest('li')).hide();
+    });
+
+    $('.header-menu').live('hover',  function(event) {/*
+        do nothing on hover over, only on hover out
+    */}, function(event){
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).parents('.header-dropdown').hide();
+    });
+
+    //Metrics tracking how users are using the new header
+    $('.header-menu a, .intersite-navigation a, .locfoot a').live('click', function(event){
+        s.linkTrackVars = s.linkTrackVar + ",prop57";
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        s.prop57 = label;
+        s.tl(this,'o',label);
+    });
+
+    function headerMenuActive() {
+        $('.header-menu-container').removeClass('header-menu-container-active').attr('aria-hidden', 'true');
+        $('.header-menu').removeClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'false');
+        $('.header-menu-button i').switchClass('icon-times', 'icon-bars', 50);
+        //$('.header-overlay').hide();
+    };
+    function headerMenuInactive() {
+        $('.header-menu-container').addClass('header-menu-container-active').attr('aria-hidden', 'false');
+        $('.header-menu').addClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'true');
+        $('.header-menu-button i').switchClass('icon-bars', 'icon-times', 50);
+        //$('.header-overlay').show();
+    };
+    $('.header-menu-button').live('click', function() {
+        if ($('.header-menu-container').hasClass('header-menu-container-active')) {
+            headerMenuActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Close', '');
+        } else {
+            headerMenuInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Open', '');
+        }
+    });
+    $("html").live("click touchstart keydown",function(event) {
+        headerMenuActive();
+    });
+    $(".header-menu").live("click touchstart keydown",function(event) {
+        event.stopPropagation();
+        // allow escape key to close for accessibility
+        if (event.which == 27) {
+            headerMenuActive();
+        }
+    });
+    // menu position and height
+    $(window).live("load resize scroll",function(e){
+        var headerHeight = $('.header-menu').outerHeight();
+        $('.header-menu-container').css({"top": headerHeight});
+    });
+
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-menu-container ul li').live('click', function() {
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Hamburger Menu', 'Click', label);
+    });
+});
+</script>
+
+
+<div class="header-menu">
+    <button class="header-menu-button"
+            id="header-menu-button"
+            aria-controls="header-menu-container"
+        ><span>menu </span><i class="icon icon-bars"></i></button>
+    <nav class="header-menu-container"
+         id="header-menu-container"
+         aria-labelledby="header-menu-button">
+        <ul class="">
+            <li class=""><a href="https://www.loc.gov/discover/">Discover</a></li>
+            <li class=""><a href="https://www.loc.gov/services-and-programs/">Services</a></li>
+            <li class=""><a href="https://www.loc.gov/visit/">Visit</a></li>
+            <li class=""><a href="https://www.loc.gov/education/">Education</a></li>
+            <li class=""><a href="https://www.loc.gov/connect/">Connect</a></li>
+            <li class=""><a href="https://www.loc.gov/about/">About</a></li>
+        </ul>
+        <ul class="header-menu-tertiary">
+            <li class=""><a href="http://www.loc.gov/rr/askalib/">Ask a Librarian</a></li>
+            <li class=""><a href="https://www.loc.gov/help/">Help</a></li>
+            <li class=""><a href="https://www.loc.gov/contact/">Contact</a></li>
+        </ul>
+        <ul class="header-menu-external">
+            <li class=""><a href="https://catalog.loc.gov/">Search Online Catalog</a></li>
+            <li class=""><a href="http://copyright.gov/">Copyright.gov</a></li>
+            <li class=""><a href="https://www.congress.gov/">Congress.gov</a></li>
+        </ul>
+    </nav>
+</div>
+
+            
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+<style>.breadcrumbs-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.breadcrumbs-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    display: none;
+  }
+}
+.breadcrumbs-row {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: -moz-box;
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0 0;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.header-breadcrumbs {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: 1;
+  /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 1;
+  /* IE 10 */
+  -moz-box-flex: 1;
+  flex: 1;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  min-width: 0;
+  /* firefox fix */
+  margin: 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 2rem;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-breadcrumbs a').live('click', function(event){
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        UX.interaction($(this), 'Breadcrumbs', 'click', label);
+    });
+
+});
+</script>
+
+
+
+<div class="breadcrumbs-wrapper">
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs-row">
+            
+            
+            <div id="header-breadcrumbs"
+                class="header-breadcrumbs">
+                <nav>
+                
+                
+                    
+                    <a href='https://www.loc.gov/'>Library of Congress</a> &gt;
+                    
+                
+                
+                
+                    
+                    Careers at the Library of Congress
+                    
+                
+                
+                </nav>
+            </div>
+            
+            
+            
+
+
+<div class="sharetool_wrapper h_adjust">
+    <div id='share-this' class="locshare-this" ></div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="content
+    careers-content
+    ">
+    <a name="skip-to-content"
+       id="skip-to-content"></a>
+    
+    
+    
+
+
+
+
+    
+    <div id='page-title'
+        class='header-wrapper header-wrapper-new-branding
+        
+        
+        
+        with-tabs
+        '>
+        
+        <h1 
+            class="smaller-h1"
+            >
+            
+            <span>Careers at the Library of Congress</span>
+        </h1>
+        
+        
+
+
+<nav class='tab-links' 
+        aria-label="Page Navigation">
+    <ul>
+    
+    
+    <li class=''>
+        <a href='https://www.loc.gov/careers/working-at-the-library/'
+            title='Working at the Library'
+            
+            >Working at the Library</a>
+    </li>
+    
+    
+    
+    <li class='selected'>
+        <a href='https://www.loc.gov/careers/'
+            title='Current Openings'
+            
+            class='selected-link'
+            aria-current='page'
+            
+            >Current Openings</a>
+    </li>
+    
+    
+</ul>
+</nav>
+
+
+<script>
+$(document).ready(function(){
+    $('.tab-links ul').clone().addClass('clone').appendTo('.tab-links');
+    $('.tab-links .clone').each(function(){
+        var list = $(this),
+            select = $(document.createElement('select')).insertBefore($(this).hide()).change(function(){
+                window.location.href = $(this).val();
+            });
+        $('.tab-links').addClass('select-wrapper');
+        $('>li a', this).each(function(){
+            var option = $(document.createElement('option'))
+                .appendTo(select)
+                .val(this.href)
+                .html($(this).html());
+            if($(this).attr('class') === 'selected-link'){
+                option.attr('selected', 'selected');
+            }
+        });
+        list.remove();
+    });
+    $(window).on("load resize",function(e){
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            $('.tab-links').addClass('select-wrapper');
+        } else {
+            $('.tab-links').removeClass('select-wrapper');
+        }
+    });
+});
+</script>
+
+    </div>
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    <!-- advanced search -->
+    
+
+    
+        
+
+<div class="search-results-wrapper">
+<div class="search-results-container">
+
+
+
+
+
+
+<div class="search-results-heading facet-trail">
+    <h2>
+        <small>
+
+        
+        <span class='search-results-summary'>
+        Results: 1-32
+        of 32
+        </span>
+        
+
+        
+            
+                <span class='search-results-summary'>
+                
+                     &nbsp; | &nbsp;  Refined by:
+                
+                </span>
+
+                
+                
+                <a  class='blue-lozenge'
+                    title="remove"
+                    href="https://www.loc.gov/search/?q="
+                    >
+                    <span>
+                    
+                        Part of:&nbsp;Careers at the Library of Congress
+                    
+                        </span>
+                    &nbsp; <i class="icon icon-times"><span>Remove</span></i></a>
+                
+                
+                
+                <a  class='blue-lozenge'
+                    title="remove"
+                    href="https://www.loc.gov/careers/?all=true"
+                    >
+                    <span>
+                    
+                        Available Online
+                    
+                    </span>
+
+                    &nbsp; <i class="icon icon-times"><span>Remove</span></i></a>
+                
+                
+            
+         
+
+        </small>
+    </h2>
+</div>
+
+
+<!--button id="facet-toggle" class="facet-toggle" aria-controls="facet-nav"><i class="icon icon-plus"></i> Refine your results</button-->
+
+
+
+
+<div class="search-results-row">
+
+
+
+<div id="main"
+    role="main"
+    class="search-results-pane">
+
+
+    
+    <header class='careers-h1''>
+        <h1 data-title="Current Openings">Current Openings</h1>
+        
+    </header>
+    
+    
+    
+
+    
+    
+        
+            
+
+    
+        <div class="nav-controls">
+        
+
+        
+        
+        
+        
+            
+<form action="https://www.loc.gov/careers/" method="get" class='view'>
+
+	
+<!-- start hidden -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start Advanced Searches Select All -->
+
+
+
+
+
+
+
+
+<!-- start collection Advanced Search specific params -->
+
+
+
+
+<!-- end collection Advanced Search specific params -->
+<!-- end Advanced Searches Select All -->
+<!-- end hidden -->
+
+
+    
+
+    
+<div class="custom-select-menu">
+    <label for="view-options" class="label-small">View</label>
+    <div class="select-wrapper">
+    <select name="st" class='sort select-default' id="view-options">
+    
+    
+    
+    <option value="list"
+         
+            selected="selected"
+        >List</option>
+    <option value="gallery"
+        >Gallery</option>
+    
+    <option value="grid"
+        >Grid</option>
+    <option value="slideshow"
+        >Slideshow</option>
+    
+    </select></div><button type="submit" class="button-default">Go</button>
+</div>
+
+
+
+</form>
+
+        
+        
+        
+        
+        
+        
+        
+            
+<form action="https://www.loc.gov/careers/" method="get" class="sortby">
+    
+        
+<!-- start hidden -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start Advanced Searches Select All -->
+
+
+
+
+
+
+
+
+<!-- start collection Advanced Search specific params -->
+
+
+
+
+<!-- end collection Advanced Search specific params -->
+<!-- end Advanced Searches Select All -->
+<!-- end hidden -->
+
+    
+    
+    
+    
+    <div class="custom-select-menu">
+		<label for="sort-options" class="label-small">Sort By</label>
+        <div class="select-wrapper">
+		<select name="sb" class='sort select-default' id="sort-options">
+		    
+			<option value=""
+                >Select</option>
+		    
+			<option value="title_s"
+		>Title</option>
+		    <option value="title_s_desc"
+		>Title (descending)</option>
+		    
+			    <option value="date_desc"
+		>Date</option>
+		    <option value="date"
+		>Date (oldest first)</option>
+		    <option value="shelf-id"
+		>Shelf Order</option>
+		    <option value="shelf-id_desc"
+		>Shelf Order (reverse)</option>
+        
+        </select>
+		</div><button type="submit" class="button-default">Go</button>
+	</div>
+</form>
+
+        
+        
+        
+        
+        <div class="clear"><!-- --></div>
+        </div>
+    
+
+        
+    
+    
+
+    <!-- Add calendar block for $date type managed content blocks
+         such as jukebox-day-by-day -->
+    
+
+    
+    <div class=''>
+        <div class='
+            
+                span
+            
+            '>
+            <div id="results"
+                >
+            
+                
+                    
+                    
+
+
+<ul class="search-results list-view">
+
+
+
+<li 
+    class="item first
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/3764/'
+           
+           rel="http://www.loc.gov/item/careers/3764/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Metadata Librarian (Vacancy#: VAR001062)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the Integrated Library System Program Office, Office of the Chief Operating Officer, Library ServicesThe position description number for this position is 360891 (GS-13) and 360892 (GS-14).The salary range indicated reflects the locality pay adjustments for the Washington, D.C., Metro area.The incumbent of this position will work a compflex,flextime work schedule.This is a non-supervisory, bargaining unit position.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>December 30, 2019</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>13/14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1410</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/assistant-head-digital-content-management-section-vacancyvar001154/'
+           
+           rel="http://www.loc.gov/item/careers/assistant-head-digital-content-management-section-vacancyvar001154/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Assistant Head, Digital Content Management Section ( Vacancy#:VAR001154)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The incumbent serves as an expert in the organization, development, and implementation of multiple complex projects involving the lifecycle management of digital content. Leads working groups, task forces, committees or ad hoc groups, which have been assigned responsibility for specific digital lifecycle management projects or tasks. Coordinates the details involved in special projects, defining tasks/assignments. Identifies, develops, and implements options for improving the performance...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 16, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1410</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/geospatialdata-visualization-librarian-vacancyvar001131/'
+           
+           rel="http://www.loc.gov/item/careers/geospatialdata-visualization-librarian-vacancyvar001131/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Geospatial/Data Visualization Librarian ( Vacancy#:VAR001131)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the Geography and Map Division,Special Collections Directorate, Library Services.The position description number for this position is 387336.The salary range indicated reflects the locality pay adjustments for the Washington, D.C., Metropolitan area.The incumbent of this position will work a compflex work schedule.This is a non-supervisory, bargaining unit position. 
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 13, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1410</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            nte 3 years ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/innovation-specialist-vacancyvar001070/'
+           
+           rel="http://www.loc.gov/item/careers/innovation-specialist-vacancyvar001070/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Innovation Specialist ( Vacancy#:VAR001070)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        Summary:The position is located in the Digital Innovation Lab in the Digital Strategy Directorate of the Office of the Chief Information Officer.The position description number for this position is 359147.The incumbent for this position will work a flexitime, compflex, or maxiflex schedule.This is a non-supervisory, bargaining unit position.Duties:The position serves as an Innovation Specialist in the Digital Innovation Lab (also known as LC Labs,...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 16, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0301</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            nte 10 months ( current and former federal employees only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/non-competitive-educational-resources-specialist/'
+           
+           rel="http://www.loc.gov/item/careers/non-competitive-educational-resources-specialist/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Non-Competitive Educational Resources Specialist
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the Center for Learning, Literacy &amp; Engagement, Office of the Librarian.The position description number for this position is 112292.The salary range indicated reflects the locality pay adjustments for the Washington, D.C., Metropolitan area.The incumbent of this position will work a compflex work schedule.This is a non-supervisory, bargaining unit position.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 24, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1701</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            temporary ( library employees only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/program-analyst-2/'
+           
+           rel="http://www.loc.gov/item/careers/program-analyst-2/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Program Analyst
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        Up to two applicants will be selected for an opportunity to serve a 120 day assignment in the Copyright Modernization Office (CMO) supporting the Analysis Section as the Program Analyst, GS 12. Depending on applicant qualifications, this may be either a short term employment promotion or a short term employment detail with no change in salary. Duties include, but are not limited to the...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 22, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0343</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/supervisory-copyright-specialist-documents-section-head-vacancy-var001103/'
+           
+           rel="http://www.loc.gov/item/careers/supervisory-copyright-specialist-documents-section-head-vacancy-var001103/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Supervisory Copyright Specialist (Documents Section Head)( Vacancy#: VAR001103)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The Documents Recordation Section of PRR is responsible for the review and verification of documents submitted, based on the recordation requirements in the statute and Copyright Office regulations. The section creates and issues an official Certificate of Recordation for those documents which meet the recordation requirements. The incumbent reports to the Deputy Director of PRR, and supervises the documents staff and operational activities. The...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 9, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 31, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1210</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            nte 3 years ( library employees only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/library-technician-archiving-vacancyvar001149/'
+           
+           rel="http://www.loc.gov/item/careers/library-technician-archiving-vacancyvar001149/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Library Technician (Archiving) (Vacancy#:VAR001149)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the Global Legal Research Directorate, Law Library.The position description number for this position is 392691.This is a non-supervisory, bargaining unit position.The incumbent of this position will work a compflex work schedule.The position serves as a Law Library Archiving Technician in the Global Legal Research Directorate, Law Library, Library Collections and Services Group, at the Library of Congress.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 21, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 4, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-07</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1411</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( u.s. citizens only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/writer-editor-vacancyvar001152/'
+           
+           rel="http://www.loc.gov/item/careers/writer-editor-vacancyvar001152/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Writer-Editor ( Vacancy#:VAR001152)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The Congressional Research Service (CRS) Congressional Programs &amp; Communications Office (CPC) seeks a Writer-Editor to write and edit CRS communications, provide communications support, and perform congressional outreach. The selectee will support the organization’s goals to foster a culture of communication and improve internal communications through writing, editing, and communications support, as well as enhance congressional awareness of the depth and breadth of CRS products...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 21, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 4, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-09</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1082</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            nte 5 years ( library employees only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/program-support-assistant-vacancyvar001115/'
+           
+           rel="http://www.loc.gov/item/careers/program-support-assistant-vacancyvar001115/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Program Support Assistant ( Vacancy#:VAR001115)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located at the Taylor Street Annex, National Library Service Blind/Physical Handicap, Library Collections and Services Group, Office of the Librarian. The Program Support Assistant applies knowledge of customer service expertise, programmatic issues and computer-based processing of applications, both software and hardware. The incumbent maintains an awareness of key issues, policies, or programs, which have the potential for influencing long and short-term...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 21, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 5, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-09</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0303</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/information-technology-specialist-enterprise-architecture-vacancy-var001093/'
+           
+           rel="http://www.loc.gov/item/careers/information-technology-specialist-enterprise-architecture-vacancy-var001093/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Information Technology Specialist (Enterprise Architecture) ( Vacancy#: VAR001093)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The incumbent serves as an agency enterprise architect, providing authoritative architecture solutions for the agency. The incumbent is responsible for leading teams of contractors and Federal staff to manage the enterprise architecture, software solutions, systems engineering efforts, data management, and hosting/infrastructure solutions. The enterprise architect is challenged with taking the Library&#39;s business strategy and then defining information technology systems architecture to support that strategy....
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 15, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 6, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>2210</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( library employees only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/administrative-specialist-vacancyvar001142/'
+           
+           rel="http://www.loc.gov/item/careers/administrative-specialist-vacancyvar001142/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Administrative Specialist ( Vacancy#:VAR001142)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the Financial Services Directorate, Office of the Chief Operating Officer. The incumbent performs administrative management functions and assists managers and supervisors in FSD in planning, organizing, directing, and controlling the utilization of human and operational resources to maximize achievement of the goals and objectives of FSD.This is a non-supervisory, non-bargaining unit position.The position description number is 392381.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 24, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 7, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0301</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/chief-human-capital-officer-vacancyvar001158/'
+           
+           rel="http://www.loc.gov/item/careers/chief-human-capital-officer-vacancyvar001158/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Chief Human Capital Officer (Vacancy#:VAR001158)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The Chief Human Capital Officer (CHCO) leads, plans, directs and coordinates a comprehensive and innovative human resources program, ensuring that the program serves and reflects the mission and goals of the Library of Congress. In that capacity, the CHCO is responsible for leading the Library&#39;s human capital planning efforts to ensure that the Library acquires, develops, and retains a workforce designed to meet its...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 8, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 10, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>SL-00</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0201</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( library employees only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/supervisory-production-analyst-vacancy-var001037/'
+           
+           rel="http://www.loc.gov/item/careers/supervisory-production-analyst-vacancy-var001037/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Supervisory Production Analyst (Vacancy# VAR001037)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The Supervisory Production Analyst reports to the Chief, Materials Development Division, National Library Service for the Blind and Print Disabled, and is delegated a high degree of autonomy and independence in the performance of the responsibilities of this position. The incumbent carries out responsibilities with broad overall guidelines and policies. The incumbent is the Contracting Officer&#39;s Representative (COR) for recorded and braille book and...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 17, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 10, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1101</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/accountant-vacancyvar001171/'
+           
+           rel="http://www.loc.gov/item/careers/accountant-vacancyvar001171/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Accountant ( Vacancy#:VAR001171)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The incumbent performs professional work in assisting with the evaluation of financial data and records transactions in financial records. The incumbent prepares and analyzes financial statements, records and reports in support of Business Enterprises. The work requires broad knowledge of theories, practices, methods, and technique of governmental and cost accounting, budgeting, preparation and analysis of financial statements, trends and organizational or program practices, policies...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 29, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 12, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-09</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0510</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/conservator-books-vacancyvar001110/'
+           
+           rel="http://www.loc.gov/item/careers/conservator-books-vacancyvar001110/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Conservator (Books) ( Vacancy#:VAR001110)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the Book Conservation Section, Conservation Division, Preservation Directorate, Library Services.The position description number for this position is 253063.The salary range indicated reflects the locality pay adjustments for the Washington, D.C., Metropolitan area.The incumbent of this position will work a flexitime work schedule.This is a non-supervisory, bargaining unit position,
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 13, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 12, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-09</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1001</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/supervisory-librarian-section-head-vacancyvar001164/'
+           
+           rel="http://www.loc.gov/item/careers/supervisory-librarian-section-head-vacancyvar001164/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Supervisory Librarian (Section Head) ( Vacancy#:VAR001164)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position is located in the China Section, Asian &amp; Middle Eastern Division, Acquisitions and Bibliographic Access Directorate, Library Services.The incumbent serves as Section Head and is responsible for managing the work of acquiring and providing metadata for materials published in China, Taiwan, Hong Kong, and Macau. The incumbent oversees the work of a staff of librarians and library technicians, and performs administrative and...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 31, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 14, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1410</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            nte 2 years ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/library-technician-digitization-technician-vacancyvar001144/'
+           
+           rel="http://www.loc.gov/item/careers/library-technician-digitization-technician-vacancyvar001144/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Library Technician (Digitization Technician) (Vacancy#:VAR001144)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position serves as a Digitization Technician and reports to the Chief, Serial and Government Publications Division through the Team Leader for Digital Projects. The position is located in the Serial and Government Publications Division, Collections and Services in Library Services at the Library of Congress. The incumbent provides assistance to Digital Conversion Specialists and others on projects to present digitally reformatted Library and...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 22, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 19, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-06</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1411</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/materials-handler-vacancy-var001018/'
+           
+           rel="http://www.loc.gov/item/careers/materials-handler-vacancy-var001018/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Materials Handler (Vacancy#: VAR001075)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The Materials Handler position is located in the Logistics Division of Integrated Support Services (ISS) Directorate, Office of the Chief Operating Officer of the Library of Congress. Responsibilities include: warehouse work receiving, moving, storing and delivering materials and supplies; erecting or dismantling office systems furniture, shelves, partitions, etc.; moving, arranging, and setting up furniture, rooms, and outdoor areas for public events; using hand tools...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 21, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 21, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>WG-06</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>6907</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( u.s. citizens only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/assistant-director-and-senior-specialist-american-law-division-vacancyvar001153/'
+           
+           rel="http://www.loc.gov/item/careers/assistant-director-and-senior-specialist-american-law-division-vacancyvar001153/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Assistant Director and Senior Specialist (American Law Division) (Vacancy#:VAR001153)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position serves as head of the American Law Division, a major CRS research division. In this capacity, and reporting directly to the Director of CRS, the Assistant Director leads, plans, directs, and evaluates the work of a team of attorneys in its production of written products and consulting services in support of the U.S. Congress. Working directly with congressional committees and Members of...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 10, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 28, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>SL-00</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>0905</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( u.s. citizens only )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/associate-director-for-publishing-vacancyvar001177/'
+           
+           rel="http://www.loc.gov/item/careers/associate-director-for-publishing-vacancyvar001177/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Associate Director for Publishing (Vacancy#:VAR001177)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This position serves as the head of CRS’s Office of Publishing with overall responsibility, as well as delegated authority, for the oversight and administration of broad, emerging, and/or critical CRS programs and operations.In this capacity, and reporting directly to the Director of CRS, the Associate Director will be responsible for directing various aspects of the Service’s editorial and publishing programs including designing and editing...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 31, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 28, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>SL-00</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1082</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/librarian-cataloger-vacancy-var001064/'
+           
+           rel="http://www.loc.gov/item/careers/librarian-cataloger-vacancy-var001064/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Librarian (Cataloger) (Vacancy#: VAR001064)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The incumbent of this position is a senior cataloger and serves as the Bibliographic Control Officer of the Bibliographic Control Section. The Bibliographic Control Officer (Librarian/Cataloger) performs the day-to-day operations of cataloging performed at the National Library Service and cataloging received from other agencies through maintenance of the NLS/BPD name and subject authority files and by review and editing of contributed records.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 27, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 28, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1410</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/librarian-cataloger-vacancyvar001064/'
+           
+           rel="http://www.loc.gov/item/careers/librarian-cataloger-vacancyvar001064/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Librarian (Cataloger) (Vacancy#:VAR001064)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The incumbent of this position is a senior cataloger and serves as the Bibliographic Control Officer of the Bibliographic Control Section. The Bibliographic Control Officer (Librarian/Cataloger) performs the day-to-day operations of cataloging performed at the National Library Service and cataloging received from other agencies through maintenance of the NLS/BPD name and subject authority files and by review and editing of contributed records.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 27, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>February 28, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1410</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/supervisory-contract-specialist-2/'
+           
+           rel="http://www.loc.gov/item/careers/supervisory-contract-specialist-2/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Supervisory Contract Specialist ( Vacancy# VAR000861)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        WHO MAY APPLY: Anyone may apply - By law, employment at most U.S. Government agencies, including the Library of Congress, is limited to U.S. citizens. However, non-citizens may be hired, provided that other legal requirements are met and the Library determines there are no qualified U.S. citizens available for the position.This position is located in the Contracts Division, Contracts and Grants Management, Office of...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>April 19, 2019</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>April 20, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1102</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/contract-specialist-vacancy-var000865/'
+           
+           rel="http://www.loc.gov/item/careers/contract-specialist-vacancy-var000865/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Contract Specialist ( Vacancy#: VAR000865)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This is an open continuous vacancy announcement. Applicants may submit or update their application before the closing date. Applicants will be referred after the first cutoff date, and subsequent referrals will be made at the manager’s request. The announcement may close earlier or at the request of the selecting official or after the job is filled.This position is located in the Contracts Section, Office...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>May 13, 2019</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>May 12, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-07</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1102</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/lead-contract-specialist-vacancyvar000911/'
+           
+           rel="http://www.loc.gov/item/careers/lead-contract-specialist-vacancyvar000911/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Lead Contract Specialist (Vacancy#:VAR000911)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This is an open continuous vacancy announcement. Applicants may submit or update their application before the closing date. Applicants will be referred after the first cutoff date, and subsequent referrals will be made at the manager’s request. The announcement may close earlier or at the request of the selecting official or after the job is filled. The first cutoff for receipt of applications under...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>May 28, 2019</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>May 27, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-13</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1102</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            nte 5 years ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/it-specialist-sysanalysis-vacancy-var000919/'
+           
+           rel="http://www.loc.gov/item/careers/it-specialist-sysanalysis-vacancy-var000919/ ">
+        
+        
+        
+
+	    
+            
+                
+                    IT Specialist (SYSANALYSIS) (Vacancy#: VAR000919)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        Responsible for the daily monitoring, operation, and maintenance for a select group of NLS Information technology systems. Takes proactive steps to ensure the continued reliable and secure operation of these systems. Performs typical administration tasks such as maintenance, Installation, or upgrades. These typically involve determination of installation/upgrade schedule, examination of release notes, configuration, scripting, programming and the physical handling of computer hardware.Anyone may apply...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>June 19, 2019</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>June 18, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-13</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>2210</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            permanent ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/contract-specialist-vacancy-var000953/'
+           
+           rel="http://www.loc.gov/item/careers/contract-specialist-vacancy-var000953/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Contract Specialist ( Vacancy#: VAR000953)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This is an open continuous vacancy announcement. Applicants may submit or update their application before the closing date. Applicants will be referred after the first cutoff date, and subsequent referrals will be made at the manager’s request. The announcement may close earlier or at the request of the selecting official or after the job is filled. The first cutoff for receipt of applications under...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>July 18, 2019</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>July 17, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-12</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1102</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            temporary ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/spp-register-2020-selective-placement-program-noncompetitive-appointments-for-applicants-with-disabilities-spp-register/'
+           
+           rel="http://www.loc.gov/item/careers/spp-register-2020-selective-placement-program-noncompetitive-appointments-for-applicants-with-disabilities-spp-register/ ">
+        
+        
+        
+
+	    
+            
+                
+                    SPP-Register 2020 - Selective Placement Program (Noncompetitive Appointments for Applicants with Disabilities) - SPP Register
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        The Library of Congress is accepting applications from people who wish to be considered for employment at the Library under its Selective Placement Program (SPP). It is the policy of the Library to recruit and hire qualified applicants with targeted disabilities by assisting these individuals in obtaining employment consistent with their level of skills and abilities and their capacity for safe and efficient job...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 10, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>December 30, 2020</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-01 - GS-15</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>1411</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            temporary ( open to all )
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/information-technology-specialist-sysanalysis-vacancy-var001148/'
+           
+           rel="http://www.loc.gov/item/careers/information-technology-specialist-sysanalysis-vacancy-var001148/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Information Technology Specialist (SYSANALYSIS) (Vacancy#: VAR001148)
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        This is an open continuous vacancy announcement. Applicants may submit or update their application before the closing date. Applicants will be referred after the first cutoff date, and subsequent referrals will be made at the manager’s request. The announcement may close earlier or at the request of the selecting official or after the job is filled.Serves as a recognized technical authority for new or...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                <li class='opening-date'>
+                    <strong class='opening-date-label'>Opening Date:</strong>
+                    <span>January 7, 2020</span>
+                </li>
+                
+                
+                    
+                    <li class='closing-date'>
+                        <strong class='closing-date-label'>Closing Date:</strong>
+                        <span>January 6, 2021</span>
+                    </li>
+                    
+                    
+                    <li class='grade'>
+                        <strong class='grade-label'>Grade Level:</strong>
+                        <span>GS-14</span>
+                    </li>
+                    
+                    
+                    <li class='series'>
+                        <strong class='series-label'>Series:</strong>
+                        <span>2210</span>
+                    </li>
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            Web Page
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/careers/'
+           
+           rel="">
+        
+        
+        
+
+	    
+            
+                
+                    Search results from Careers at the Library of Congress, Available Online
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        Search results 1 - 32 of 32.
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+<li 
+    class="item 
+    
+    "
+    
+    >
+
+    
+        
+            
+        
+    
+
+    <div class='description
+    
+        
+            no-icon
+        
+    
+
+    '>
+        
+        
+        
+            <span class="original-format">
+            
+            temporary
+
+            
+            </span>
+        
+        
+
+        <div class='item-description'>
+
+        <span class='item-description-title'>
+
+        
+        <a href='https://www.loc.gov/item/careers/program-analyst/'
+           
+           rel="http://www.loc.gov/item/careers/program-analyst/ ">
+        
+        
+        
+
+	    
+            
+                
+                    Program Analyst
+                
+            
+        
+
+        
+        </a>
+        
+
+        
+
+
+        
+        
+        
+
+        
+            
+            
+            
+            
+            
+            
+        
+
+        </span>
+        
+        
+        
+        <span class='item-description-abstract'>
+        
+            
+
+                
+                    
+                        Detail/Temporary Promotion OpportunityOffice of the Chief Information OfficerDetail Position: Program AnalystSubmission Deadline: Tuesday, January 14, 2020Desired Start Date: February 3, 2020Work Schedule: Flextime – Monday through Friday, 40 hours per week.Area of Consideration: Limited to GS13 or GS14 level staff Library Wide. BackgroundThe Office of the Chief Information Officer (OCIO) IT Design &amp; Development Directorate is offering a reimbursable detail for a qualified GS14...
+                    
+                
+
+            
+        
+        </span>
+        
+
+        
+
+        
+        <ul>
+            
+                
+                
+                    
+                    
+                    
+                
+            
+
+
+        </ul>
+        
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+    </div>
+
+</li>
+
+
+</ul>
+
+
+<script>
+jQuery(function($) {
+    $('.more-less-toggle').click(function(){
+        if($(this).parent().children('.full-result').is(':hidden')) {
+            $(this).html('Less <i class="icon icon-angle-up"></i>');
+            $(this).parent().children('.truncated-result').hide();
+            $(this).parent().children('.full-result').show();
+        } else {
+            $(this).html('More <i class="icon icon-angle-down"></i>');
+            $(this).parent().children('.full-result').hide();
+            $(this).parent().children('.truncated-result').show();
+        }
+        return false;
+    });
+});
+</script>
+
+
+                    
+                
+
+            
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+
+    
+
+<div class="paginations ">
+    <div class="pagination-links-wrapper" 
+         role="navigation" 
+         aria-label="Pagination">
+    <span class="pagination-links">
+      
+	
+	<span class="pagination-inactive prev off" 
+          aria-hidden="true" 
+          aria-label="Previous Page"><i
+          class="icon icon-chevron-left"></i></span>
+	
+    
+		
+			
+			<span class="pagination-inactive selected" 
+                  aria-label="Page 1"
+                  >1</span>
+			
+		
+	
+      
+	
+	<span class="pagination-inactive next off" 
+          aria-hidden="true" 
+          aria-label="Next Page"><i 
+          class="icon icon-chevron-right"></i></span>
+	
+     </span>
+     </div>
+    
+<div class="results-per-page" role="navigation">
+<form action="https://www.loc.gov/careers/" method="get">
+    
+        
+<!-- start hidden -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start Advanced Searches Select All -->
+
+
+
+
+
+
+
+
+<!-- start collection Advanced Search specific params -->
+
+
+
+
+<!-- end collection Advanced Search specific params -->
+<!-- end Advanced Searches Select All -->
+<!-- end hidden -->
+
+    
+
+    
+
+    <div class="custom-select-menu">
+        <label class="label-small"
+               for="results-per-page">Results per page</label>
+        <div class="select-wrapper">
+        <select name="c"
+                class='sort select-default'
+                id="results-per-page">
+
+            
+            <option value="25"
+                >
+                25
+            </option>
+            
+            <option value="50"
+                
+                    selected="selected"
+                >
+                50
+            </option>
+            
+            <option value="100"
+                >
+                100
+            </option>
+            
+            <option value="150"
+                >
+                150
+            </option>
+                       
+            
+                 
+            
+        </select>
+        </div><button type="submit" class="button-default">Go</button>
+    </div>
+</form>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id="facet-nav"
+     class="facet-nav"
+     
+     role="complementary">
+
+    
+    <h1 class="facet-heading">Refine your results</h1>
+
+    
+    
+    <div class="facet-box facet-list" id="job-type-facet">
+        <h2 id="job-type-facet-label" class="js-expandmore">Job Type </h2>
+
+        
+
+        <!-- collapsible region content begin -->
+        <!-- For managed-content open 1st & close rest by default -->
+        
+            
+                <div class="js-to_expand is-opened">
+            
+        
+          <ul class='std' >
+            
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:permanent"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Permanent
+                                
+                            </span>
+                            <span class='count'>21</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:temporary"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Temporary
+                                
+                            </span>
+                            <span class='count'>4</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:nte+5+years"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Nte 5 Years
+                                
+                            </span>
+                            <span class='count'>2</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:detail"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Detail
+                                
+                            </span>
+                            <span class='count'>2</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:nte+3+years"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Nte 3 Years
+                                
+                            </span>
+                            <span class='count'>2</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:nte+10+months"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Nte 10 Months
+                                
+                            </span>
+                            <span class='count'>1</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:intermittent"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Intermittent
+                                
+                            </span>
+                            <span class='count'>1</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=subject:nte+2+years"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Nte 2 Years
+                                
+                            </span>
+                            <span class='count'>1</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+
+            
+
+            
+          </ul>
+        <!-- collapsible region content end -->
+        </div>
+
+        <!-- COLUMN CHART CODE HERE -->
+        
+
+
+        <!-- COLUMN CHART CODE END -->
+    </div>
+
+    
+    
+    
+    <div class="facet-box facet-list" id="availability-facet">
+        <h2 id="availability-facet-label" class="js-expandmore">Availability </h2>
+
+        
+
+        <!-- collapsible region content begin -->
+        <!-- For managed-content open 1st & close rest by default -->
+        
+            
+                <div class="js-to_expand is-opened">
+            
+        
+          <ul class='std' >
+            
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=partof_position_availability:open+to+all"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Open to All
+                                
+                            </span>
+                            <span class='count'>21</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=partof_position_availability:library+employees+only"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Library Employees Only
+                                
+                            </span>
+                            <span class='count'>5</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=partof_position_availability:u.s.+citizens+only"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                U.S. Citizens Only
+                                
+                            </span>
+                            <span class='count'>3</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+            
+            <li
+            
+            
+            >
+            	
+	                
+                        <a href="https://www.loc.gov/careers/?fa=partof_position_availability:current+and+former+federal+employees+only"
+                           title='include this search constraint'>
+                            <span class='facet-item'>
+                            
+                                Current and Former Federal Employees Only
+                                
+                            </span>
+                            <span class='count'>1</span>
+                        </a>
+	                
+	            
+            </li>
+            
+
+            
+            
+            
+
+            
+
+            
+          </ul>
+        <!-- collapsible region content end -->
+        </div>
+
+        <!-- COLUMN CHART CODE HERE -->
+        
+
+
+        <!-- COLUMN CHART CODE END -->
+    </div>
+
+    
+    
+
+    
+
+    
+    <aside class="article-aside">
+        <h3>For More Information</h3>
+<p>
+    Human Resources<br/>
+    Library of Congress<br/>
+    101 Independence Ave, S.E.<br/>
+    Washington, D.C. 20540-1600<br/>
+    <strong>Email:</strong>
+    <a href='mailto:jobhelp@loc.gov'>JobHelp@loc.gov</a><br/>
+</p>
+    </aside>
+    
+
+    
+
+        
+
+        
+
+        
+            
+            
+
+<aside class="article-aside related-resources-box">
+    
+    <h3>Related Resources</h3>
+    
+    <ul>
+        
+        <li>
+            <a href="https://www.loc.gov/internships-and-fellowships/" 
+                >
+                Internships and Fellowships 
+                
+            </a>
+        </li>
+        
+    </ul>
+</aside>
+
+
+            
+        
+    
+</div>
+
+
+
+
+</div><!-- end search-results-row -->
+
+
+
+
+</div><!-- end search-results-container -->
+</div><!-- end search-results-wrapper -->
+
+
+    
+
+</div>
+
+
+    
+
+
+<style>.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #999;
+  padding-top: 35px;
+}
+.footer a {
+  color: #666;
+}
+@media print {
+  .footer {
+    display: none;
+  }
+}
+.footer-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.footer-social-links-wrapper {
+  border-bottom: 1px solid #999;
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+}
+.footer-social-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+  display: inline-block;
+  margin: 0 28px 0 0;
+}
+@media (max-width: 992px) {
+  .footer-social-title {
+    display: block;
+    margin: 0 0 7px;
+  }
+}
+.footer-social-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -7px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.footer-social-links > li {
+  display: inline-block;
+  margin: 0 7px;
+}
+.footer-social-links > li i {
+  font-size: 17.5px;
+}
+.footer-social-links > li span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.footer-social-links > li a .icon-external-link {
+  font-size: 12.6px;
+  color: #666;
+}
+.footer-social-links > li.footer-social-link-rss a {
+  color: #f47f65;
+}
+.footer-social-links > li.footer-social-link-email a {
+  color: #00618e;
+}
+.footer-social-links > li.footer-social-link-survey {
+  border-left: 1px solid #999;
+  padding-left: 28px;
+  margin-left: 14px;
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-survey a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links > li.footer-social-link-survey {
+    border: none;
+    padding: 0;
+    display: block;
+    margin-top: 10.5px;
+  }
+}
+.footer-social-links > li.footer-social-link-itunesu {
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-itunesu a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links {
+    display: block;
+  }
+}
+@media (min-width: 993px) {
+  .footer-row {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -moz-box;
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin: 0 -1rem;
+  }
+}
+.footer-links-wrapper .footer-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -8.75px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.footer-links-wrapper .footer-links > li {
+  display: inline-block;
+  margin: 0 8.75px;
+}
+.footer-links-wrapper .footer-links > li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+@media (max-width: 992px) {
+  .footer-links-wrapper {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+@media (min-width: 993px) {
+  .footer-links-wrapper {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1;
+    /* IE 10 */
+    -moz-box-flex: 1;
+    flex: 1;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    min-width: 0;
+    /* firefox fix */
+    margin: 0 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.intersites-links-wrapper {
+  margin: 0 14px;
+}
+@media (max-width: 992px) {
+  .intersites-links-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 28px;
+  }
+}
+.intersites-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -1rem;
+}
+.intersites-links > li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.intersites-links > li > a {
+  display: block;
+}
+.intersites-links > li > a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .intersites-links > li > a {
+    margin: 5px 0;
+  }
+}
+.intersites-links > li.intersites-link-congress > a {
+  width: 125px;
+  height: 30px;
+  background-size: 125px 30px;
+  background: url("https://www.loc.gov/static/images/congress-gov.svg?72026") no-repeat;
+}
+.intersites-links > li.intersites-link-copyright > a {
+  width: 175px;
+  height: 30px;
+  background-size: 175px 30px;
+  background: url("https://www.loc.gov/static/images/copyright-gov.svg?72026") no-repeat;
+}
+@media (max-width: 992px) {
+  .intersites-links {
+    text-align: center;
+  }
+}
+</style>
+<script>//UX Interaction Tracking
+jQuery(function($){
+    $('.footer-social-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Follow', 'Click', label);
+    });
+    $('.footer-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Footer', 'Click', label);
+    });
+});
+</script>
+
+
+<footer class="footer" role="contentinfo">
+    <div class="footer-container">
+
+            <div class="footer-social-links-wrapper">
+                <span class="footer-social-title"><a href="https://www.loc.gov/connect/">Follow Us</a></span>
+                <ul class="footer-social-links">
+
+                    <li class="footer-social-link-email"><a href="http://loc.gov/subscribe/" title="Email"><i class="icon icon-envelope-square"></i><span> Email</span></a></li>
+                    <li class="footer-social-link-facebook"><a href="https://www.facebook.com/libraryofcongress/" title="Facebook"><i class="image-icon facebook"></i><span> Facebook</span></a></li>
+                    <li class="footer-social-link-twitter"><a href="https://www.twitter.com/librarycongress" title="Twitter"><i class="image-icon twitter"></i><span> Twitter</span></a></li>
+                    <li class="footer-social-link-youtube"><a href="https://www.youtube.com/libraryofcongress/" title="Youtube"><i class="image-icon youtube"></i><span> Youtube</span></a></li>
+                    <li class="footer-social-link-pinterest"><a href="https://www.pinterest.com/LibraryCongress/" title="Pinterest"><i class="image-icon pinterest"></i><span> Pinterest</span></a></li>
+                    <li class="footer-social-link-flickr"><a href="https://www.flickr.com/photos/library_of_congress/" title="Flickr"><i class="image-icon flickr"></i><span> Flickr</span></a></li>
+                    <li class="footer-social-link-instagram"><a href="https://instagram.com/librarycongress/" title="Instagram"><i class="image-icon instagram"></i><span> Instagram</span></a></li>
+                    <li class="footer-social-link-itunes"><a href="https://itunes.apple.com/us/artist/library-of-congress/id1280713133?mt=2" title="iTunes"> <i class="image-icon itunes"></i><span> iTunes</span></a></li>
+                    <li class="footer-social-link-survey"><a
+                        
+                        href="https://www.research.net/r/libraryofcongress"
+                        
+                        title="Take our survey">Take our survey <i class="icon icon-external-link"><span>External</span></i></a></li>
+                </ul>
+            </div>
+        <div class="footer-row">
+            <div class="footer-links-wrapper">
+                <ul class="footer-links">
+                    <li><a href="https://www.loc.gov/accessibility/">Accessibility</a></li>
+                    <li><a href="https://www.loc.gov/legal/">Legal</a></li>
+                    <li><a href="https://www.loc.gov/about/office-of-the-inspector-general/">Inspector General</a></li>
+                    <li><a href="https://www.loc.gov/legal/standard-disclaimer-for-external-links/">External Link Disclaimer</a></li>
+                    <li><a href="http://www.usa.gov/">USA.gov</a></li>
+                    <li><a href="https://www.loc.gov/careers/">Careers</a></li>
+                    <li><a href="https://www.loc.gov/contact/">Contact</a></li>
+                    <li><a href="https://www.loc.gov/news/">Media</a></li>
+                    <li><a href="https://www.loc.gov/philanthropy/online-donation/fund/">Donate</a></li>
+                    <li><a href="http://library-of-congress-shop.myshopify.com/">Shop</a></li>
+                </ul>
+            </div>
+            <div class="intersites-links-wrapper">
+                <ul class="intersites-links">
+                    <li class="intersites-link-congress"><a href="http://www.congress.gov/"><span>Congress.gov</span></a></li>
+                    <li class="intersites-link-copyright"><a href="http://copyright.gov/"><span>United States Copyright Office</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+
+<style></style>
+<script>jQuery(function ($) {
+    var scroll_timer,
+        displayed = false,
+        $message = $('.back-to-top a').hide(),
+        $window = $(window),
+        top = $(document.body).children(0).position().top;
+
+    $("#back-to-top").click(function(event){
+        $window.scrollTop(0);
+        event.preventDefault();
+        return false;
+    });
+
+    $window.scroll(function () {
+        window.clearTimeout(scroll_timer);
+        scroll_timer = window.setTimeout(function () {
+            if($window.scrollTop() <= top){
+                displayed = false;
+                $message.fadeOut(800);
+            }else if(!displayed){
+                displayed = true;
+                $message.stop(true, true).show().click(function(){
+                    $message.fadeOut(800);
+                });
+            }
+        }, 100);
+    });
+
+    $("#back-to-top").click(function(e){
+        UX.interaction($(this), 'Footer', 'click', 'Back to top');
+    });
+});
+
+</script>
+
+
+<div class="back-to-top">
+    <a id='back-to-top'
+        href='#' ><i
+        class="icon icon-arrow-up"></i>&nbsp;<span>Back to top</span></a>
+</div>
+
+
+
+
+    
+
+
+<script>(function(){
+
+var data_listeners = {};
+
+
+window.addDataListener = function(channel, callback){
+    if(!data_listeners[channel]){
+        data_listeners[channel] = [];
+    }
+    data_listeners[channel].push(callback);
+    load_data(channel, callback);
+};
+
+
+/* 
+Uses local storage for messaging. Set message in local storage and
+clear it right away. This is a safe way how to communicate with other
+tabs while not leaving any traces. */
+window.broadcastData = function(channel, data, replay){
+    message_broadcast(channel, data, replay);
+};
+
+
+function message_broadcast(channel, data, replay){
+    var message = {
+        channel: channel,
+        data: data
+    }
+    localStorage.setItem('message', JSON.stringify(message));
+    localStorage.removeItem('message');
+
+    if(replay){
+        save_data(channel, data);
+    }
+};
+
+
+function message_receive(event){
+    var i,
+        channel,
+        data,
+        listeners,
+        listener,
+        message;
+
+    if(!event || event.key != 'message' || !event.newValue){ return; }
+
+    message = JSON.parse(event.newValue);
+    if(!message){ return; }
+
+    channel = message.channel
+    if(!channel){ return; }
+
+    listeners = data_listeners[channel];
+    if(!listeners){ return; }
+
+    data = message.data;
+    for(i = 0; i < listeners.length; i++){
+        listener = listeners[i];
+        listener(data);
+    }
+};
+
+
+function save_data(channel, data){
+    var saved_data = localStorage.getItem(channel),
+        keys,
+        i;
+
+    if(saved_data){
+        try {
+            saved_data = JSON.parse(saved_data);
+        } catch (error) {
+            // We loose the stored state, but dont end up in a vicous cycle
+            // never being able to save it again.
+            saved_data = {};
+        }
+    } else {
+        saved_data = {};
+    }
+    keys = Object.keys(data);
+    for(i = 0; i < keys.length; i++){
+        saved_data[keys[i]] = data[keys[i]];
+    }
+    localStorage.setItem(channel, JSON.stringify(saved_data));
+};
+
+
+function load_data(channel, callback){
+    var data = localStorage.getItem(channel);
+    if(data){
+        data = JSON.parse(data);
+        callback(data);
+    }
+};
+
+window.addEventListener('storage', message_receive);
+
+})();</script>
+
+
+
+
+<script defer='defer'>
+LOCSuggest = {
+	serviceUrl: 'https://www.loc.gov/search/suggest/'
+};
+MEDIA_URL = 'https://media.loc.gov/';
+</script>
+
+<script defer='defer'
+    type="text/javascript"
+    src='https://www.loc.gov/static/javascript/base.js?123456789.-1'></script>
+
+<script defer='defer'
+    type="text/javascript"
+    src='https://www.loc.gov/static/javascript/share.js?123456789.-1'></script>
+
+<!--[if lt IE 9]>
+    <script src='https://www.loc.gov/static/js/lib/html5shiv.js?123456789.-1'></script>
+    <script src='https://www.loc.gov/static/js/lib/selectivizr.js?123456789.-1'></script>
+<![endif]-->
+
+
+
+<script defer='defer'>
+PORTAL_FORM_KEY = '7e31f1adb1d95bec35b631b975794e20';
+</script>
+
+
+
+
+
+
+    <script defer='defer'>
+
+jQuery(function($) {
+    /*
+        Grid and gallery layouts
+     */
+
+    var isotope_options = {
+        itemSelector: '.item'
+    };
+    // If in the grid or gallery style then make sure the
+    // pages are in order and there are no blank spaces
+    
+    isotope_options['layoutMode'] = 'fitRows';
+    
+    
+    isotope_options['layoutMode'] = 'fitRows';    
+    
+
+    
+    $('.search-results.grid-view').isotope(isotope_options);
+    imagesLoaded( $('#results'), function() {
+        $('.search-results.grid-view').isotope(isotope_options);
+    });
+    
+
+    var $iconic = $(".iconic");
+    if ($iconic.length > 0) {
+        var loaded_count = 0;
+        $iconic.on("load", function() {
+            loaded_count++;
+            // trigger isotope every once in a while as the images are loading:
+            if (loaded_count % 5 === 0) {
+                $('.search-results.grid-view').isotope(isotope_options);
+            }
+        });
+    }
+});
+
+jQuery(function($) {
+    
+    
+    var slider;
+    function create_slideshow($selector) {
+        slider = $selector.royalSlider({
+            fullscreen: {
+                enabled: true,
+                nativeFS: true
+            },
+            controlNavigation: 'thumbnails',
+            imageAlignCenter: true,
+            autoScaleSlider: false,
+            //autoScaleSliderHeight: 800,
+            loop: false,
+            navigateByClick: false,
+            numImagesToPreload: 2,
+            arrowsNav: true,
+            arrowsNavAutoHide: true,
+            arrowsNavHideOnTouch: true,
+            keyboardNavEnabled: true,
+            fadeinLoadedSlide: true,
+            //globalCaption: false,
+            //globalCaptionInside: true,
+            thumbs: {
+                appendSpan: true,
+                firstMargin: true,
+                spacing: 10
+            },
+            deeplinking: {
+                // deep linking options go here
+                enabled: true,
+                change: true,
+                prefix: 'slide-'
+            }
+        }).data("royalSlider");
+
+        $('.royalSlider').royalSlider("updateSliderSize", true);
+
+        
+        slider.ev.on('rsAfterContentSet', function (e, slideObject) {
+            var img = slideObject.holder.find('img').eq(0);
+            if (img && img.length && slideObject.caption) {
+                img.attr('alt', slideObject.caption.text());
+            }
+        });
+        return slider;
+    }
+
+    function create_overlay(highlight_id, left, top, width, height) {
+        return $('<div id="' + highlight_id + '" class="hit-highlight image-highlight" />')
+        .css({
+            'left': left + '%',
+            'top': top + '%',
+            'width': width + '%',
+            'height': height + '%',
+            'position': 'absolute',
+            'z-index': 10
+        });
+    }
+
+    function position_overlays(page_id, page_width, page_height, coords_list, 
+            $image, $container, fudge) {
+        if (!($container.length)) {
+            // no actual search result for this page -- exit this function
+            return true;
+        }
+        $container.find('div.image-highlight').remove();
+        if (!coords_list) {
+            // coords data doesn't exist -- exit this function
+            return true;
+        }
+        var container_width = $container.width();
+        var container_height = $container.height();
+        
+        var image_marginLeft = $image[0].offsetLeft;
+        var image_marginTop = $image[0].offsetTop;
+        var image_width = $image.width();
+        var image_height = $image.height();
+
+        // The overlays are positioned relative to their parent, the
+        // $container, but they need to show up in the right place relative
+        // to the image.
+        // The $container can be larger than the image,
+        // so we take the ratio of the sizes and use it to scale the
+        // positions, widths, and heights of the highlight overlays.
+        // We also make the overlays a little larger so they're more visible
+        // and we shift them a little using the "fudge" numbers.
+        var marginLeft = image_marginLeft / container_width;
+        var marginTop = image_marginTop / container_height;
+        var scaleWidth = image_width / container_width;
+        var scaleHeight = image_height / container_height;
+
+        $.each(coords_list, function (index, coords) {
+            // word coordinates: [left, top, width, height]
+            var highlight_id = "highlight-" + page_id + '-' + index;
+
+            var overlay_left = 100 * (marginLeft + scaleWidth * coords[0] / page_width) + fudge.left;
+            var overlay_top = 100 * (marginTop + scaleHeight * coords[1] / page_height) + fudge.top;
+            var overlay_width = 100 * coords[2] / page_width * scaleWidth + fudge.width;
+            var overlay_height = 100 * coords[3] / page_height * scaleHeight + fudge.height;
+
+            var $highlight_overlay = create_overlay(highlight_id,
+                overlay_left, overlay_top, overlay_width, overlay_height);
+
+            $container.append($highlight_overlay);
+        });
+    }
+
+    var word_coordinates_pages;
+    
+    word_coordinates_pages = {};
+    
+
+    var get_$container;
+    var get_$image;
+    var fudge_numbers;
+
+    
+    
+    get_$container = function(page_id) {
+        return $("#highlights-container-" + page_id);
+    };
+    get_$image = function(page_id) {
+        return $("#iconic-segment-image-" + page_id);
+    };
+    fudge_numbers = {
+        left: -1.3,
+        top: -0.5,
+        width: 2.5,
+        height: 1.3
+    };
+    
+    
+        if (!$.isEmptyObject(word_coordinates_pages)) {
+            var $iconic = $(".iconic");
+            var loaded = 0;
+            var loaded_total = $iconic.length;
+            // make sure we wait til all the images are loaded before we try to position the highlights on them:
+            $iconic.one("load", function() {
+                loaded++;
+                if (loaded === loaded_total) {
+                    $.each(word_coordinates_pages, function(page_id, page) {
+                        var $image = get_$image(page_id);
+                        var $container = get_$container(page_id);
+                        position_overlays(page_id, page.width, page.height, page.coords_list,
+                            $image, $container, fudge_numbers);
+                    });
+                }
+            }).each(function() {
+                // to make sure the "on load" event occurs even if the
+                // images are already cached:
+                if (this.complete) {
+                    $(this).load();
+                }
+            });
+        }
+        
+     
+
+
+    
+    $(window).resize(function() {
+        setTimeout(function() {
+            $.each(word_coordinates_pages, function(page_id, page) {
+                var $container = get_$container(page_id);
+                var $image = get_$image(page_id, $container);
+                position_overlays(page_id, page.width, page.height, page.coords_list,
+                    $image, $container, fudge_numbers);
+            });
+        }, 300);
+    });
+});
+</script>
+
+<script>
+"use strict";
+//Object to hold Advanced Search Form
+var AdvancedSearchFormObj = {
+    
+    // It seems strange to have this so many times rather than just once
+    // But I feel like it increase readability and describes why things are
+    // happening when they are called
+    setup: function(){
+        this.initializeData();
+        this.qs_ops_session_key = "advanced_search_form_qs_ops";
+    },
+    
+    resetData: function(){
+        this.initializeData();       
+    },
+    
+    initializeData: function(){
+        this.qs_ops = {
+            "qs": [],
+            "ops": []
+        };
+    },
+    
+    sessionStorageAllowed: function(){
+        if (typeof(Storage) !== "undefined"){
+            return true;
+        } else {
+            return false;
+        }
+    },
+    
+    saveQsOps : (function($){
+        return  function(type){
+            //This is here because 'this' becomes something else through the next jQuery call
+            var _this = this;
+            
+            this.resetData();
+            
+            switch(type){
+            case "display-level":
+                //Save the queries and ops
+                $("#advanced-search-form")
+                .find("div.advanced-keyword-search:visible")
+                .each(function() {
+                    var q = $(this).find("input.advanced-query").val();
+                    if (q) {
+                        var op = $(this).find("select.advanced-operator").val();
+                        _this.qs_ops.ops.push(op);
+                        _this.qs_ops.qs.push(q);
+                    }
+                });
+                break;
+            case "no-results":
+                this.qs_ops.qs = [];
+                this.qs_ops.ops = [];
+                break;
+            }
+        };
+    })(jQuery),
+    
+    retrieveQsOpsFromSession: function(){
+        var qs_ops = this.retrieveFromSession(this.qs_ops_session_key);
+        if (qs_ops){
+            this.qs_ops = qs_ops;
+        }
+    },
+    
+    retrieveFromSession: function(sessionKey){
+        var sessionValue = null;
+        if (this.sessionStorageAllowed()){
+            if (sessionStorage.hasOwnProperty(sessionKey)){
+                sessionValue = sessionStorage.getItem(sessionKey);
+                // Remove the key from session storage
+                sessionStorage.removeItem(sessionKey);
+                sessionValue = JSON.parse(sessionValue);
+            }
+        }
+        return sessionValue;
+    },
+    
+    populateQsOpsFields: (function($){
+        return function(){
+            var _this = this;
+            //Set queries
+            $("#advanced-search-form")
+                .find("div.advanced-keyword-search")
+                .each(function(index, el) {
+                    var saved_q = _this.qs_ops.qs[index];
+                    if (saved_q) {
+                        var $el = $(el);
+                        $el.find("input.advanced-query").val(saved_q);
+                        var saved_op = _this.qs_ops.ops[index];
+                        $el.find("select.advanced-operator").val(saved_op);
+                        $el.show();
+                    } else {
+                        return false;
+                    }
+                });            
+        };
+        
+    })(jQuery),
+    
+    storeInSession : function(){
+        // Check session storage is support by the browser
+        if (this.sessionStorageAllowed()){
+            if (this.qs_ops.qs.length){
+                sessionStorage.setItem(
+                    this.qs_ops_session_key,
+                    JSON.stringify(this.qs_ops)
+                );
+            }
+        }
+    },
+};
+</script>
+
+</div>
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+if(window['_satellite']){
+    _satellite.pageBottom();
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.loc.gov/careers/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jan 2020 15:06:44 GMT -->
+</html>
