@@ -1,6 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.loc.gov	TRUE	/	FALSE	1999999999	__cfduid	d4a9a8b99c26b7db81fa97194b164d1681580482263
-www.loc.gov	TRUE	/	FALSE	1999999999	SameSite	Lax
-www.loc.gov	TRUE	/	FALSE	1999999999	ci_session	a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22e92e14e3dea41fb6e6a33480d8f01ac7%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%2214.139.242.98%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mozilla%2F4.5+%28compatible%3B+HTTrack+3.0x%3B+Windows+98%29%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221580482337%22%3B%7D3591cf851a3c38aab2dede53b69ce7fe
-
