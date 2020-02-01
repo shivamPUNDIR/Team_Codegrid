@@ -1,14 +1,3 @@
-
-
-
-/*! jQuery UI - v1.10.2 - 2013-05-01
-* http://jqueryui.com
-* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
-* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Arial%2C%20Helvetica%2C%20sans-serif&fwDefault=normal&fsDefault=1em&cornerRadius=0&bgColorHeader=%23cccccc&bgTextureHeader=flat&bgImgOpacityHeader=100&borderColorHeader=%23cccccc&fcHeader=%23333333&iconColorHeader=%23333333&bgColorContent=%23ffffff&bgTextureContent=flat&bgImgOpacityContent=100&borderColorContent=%23cccccc&fcContent=%23333333&iconColorContent=%23333333&bgColorDefault=%23eeeeee&bgTextureDefault=flat&bgImgOpacityDefault=100&borderColorDefault=%23dddddd&fcDefault=%23666666&iconColorDefault=%23888888&bgColorHover=%23eeeeee&bgTextureHover=flat&bgImgOpacityHover=100&borderColorHover=%23999999&fcHover=%23333333&iconColorHover=%23333333&bgColorActive=%23ffffff&bgTextureActive=flat&bgImgOpacityActive=100&borderColorActive=%23cccccc&fcActive=%23333333&iconColorActive=%23333333&bgColorHighlight=%23fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=%23fcefa1&fcHighlight=%23363636&iconColorHighlight=%232e83ff&bgColorError=%23fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=%23cd0a0a&fcError=%23cd0a0a&iconColorError=%23cd0a0a&bgColorOverlay=%23aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=%23aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px&zThemeParams=5d00000100ef05000000000000003d8888d844329a8dfe02723de3e5700bbb34ecf36cd860b0b15c401619a7e924a16722e66e3e2a2945dabbdb3cb54cf95e9d49d626ee5ce67245f727ef682c200e494d70eb38204c605fb69d3ded8fb25c65cbcc29f42471975a772d1931b5bd5acb9552851c6a1e55174c7c160f404fdc7b7ad5381e18c48d3bf7147a5dd0a20e5a8b469c380ce15e3d8bdc938ac514514b1f022191a3c25ec6e447729d46167ac48a19011ff933e2f964da7d27f92eb7bae7d3f76a07e820bfe28ac212fe0d8229bc4eead42e23eeb950b2355cc57e430b840be416309aac84e20bbc3eb99b08a0fe4d3fa00200890bcb2ef096c8055721ea640a4b8ea31c2dae8c62ed37eed779cd3056ec23886a92060a5121281d8bb62ffdb1fdb769781c506fc14c8a0c19f00b8c9762ad8ccc0946c9f00bf554c843efc9482bd793f8aa24198e78a6d5b0529fb94200344cf1e6c53aa8c70210855c8ac5ca36236f7564b6c8f8994f12f75baae38746cb478b1ea8c32223b7c509e15d8f22ae7184b6bfb44dd5996a0a3cb8c5e049c9c4237f8bbb84b7ad5a3f6a475337336b6f881def3609bcececb4f01933885e1898ebe70cff07a4ffd710295b
-* Copyright 2013 jQuery Foundation and other contributors Licensed MIT */
-
-/* Layout helpers
-----------------------------------*/
 .ui-helper-hidden {
 	display: none;
 }

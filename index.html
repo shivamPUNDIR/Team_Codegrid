@@ -1042,9 +1042,9 @@ var doPageMetricsPlugin = function(s){
         class="test screen-readers-only">Search</label>
     
     
-<form role="search" method="get" action="https://www.loc.gov/search/">
+<form role="search" method="get" action="/search">
     <div class="header-search-formats">
-        <select name="in"
+        <!-- <select name="in"
                 id="searchFormat"
                 aria-label="search"
                 class="header-search-format-select">
@@ -1112,12 +1112,12 @@ var doPageMetricsPlugin = function(s){
                     >3D Objects</option>
             
             
-        </select>
+        </select> -->
     </div>
     <div class='header-search-input-wrapper'>
         <input  type="search"
                 title="Search the Library of Congress"
-                placeholder="Search Loc.gov"
+                placeholder="Search nearby users"
                 name="q"
                 id="search"
                 class='locsuggest header-search-input'
@@ -1361,23 +1361,19 @@ ul .header-menu .header-menu-container > ul {
          id="header-menu-container"
          aria-labelledby="header-menu-button">
         <ul class="">
-            <li class=""><a href="discover/index.html">Discover</a></li>
-            <li class=""><a href="services-and-programs/index.html">Services</a></li>
-            <li class=""><a href="visit/index.html">Visit</a></li>
-            <li class=""><a href="education/index.html">Education</a></li>
-            <li class=""><a href="connect/index.html">Connect</a></li>
-            <li class=""><a href="about/index.html">About</a></li>
+            <li class=""><a href="./login.html">Discover</a></li>
+            <li class=""><a href="./login.html">Services</a></li>
+            
+            <li class=""><a href="./login.html">Connect</a></li>
+            <li class=""><a href="./about.html">About</a></li>
         </ul>
         <ul class="header-menu-tertiary">
-            <li class=""><a href="rr/askalib/index.html">Ask a Librarian</a></li>
-            <li class=""><a href="help/index.html">Help</a></li>
+           
             <li class=""><a href="contact/index.html">Contact</a></li>
         </ul>
-        <ul class="header-menu-external">
+        <!-- <ul class="header-menu-external">
             <li class=""><a href="https://catalog.loc.gov/">Search Online Catalog</a></li>
-            <li class=""><a href="http://copyright.gov/">Copyright.gov</a></li>
-            <li class=""><a href="https://www.congress.gov/">Congress.gov</a></li>
-        </ul>
+        </ul> -->
     </nav>
 </div>
 
@@ -1658,7 +1654,7 @@ jQuery(function($){
         <li><a href="https://catalog.loc.gov/">Library Catalog</a></li>
         <li><a href="collections/index.html">Digital Collections</a></li>
        
-        <li><a href="services-and-programs/index.html">Login</a></li>
+        <li><a href="login.html">Login</a></li>
     </ul>
 </section>
 <script>
@@ -1843,10 +1839,7 @@ jQuery(function($){
 
     <section class="your-library">
     <h2>Your Library</h2>
-    <p class="your-library-abstract"
-        >Use the largest library in the world online or in person! <a
-       href="about/index.html">More about the Library</a>.
-    </p>
+  
     <div class="your-library-links-container">
         <ul class="your-library-links">
             <li><a href="visit/index.html"><img
@@ -2316,9 +2309,9 @@ jQuery(function($){
        </li>
        
    </ul>
-   <div class="public-domain-button-wrapper">
+   <!-- <div class="public-domain-button-wrapper">
        <button class="public-domain-button">Show More</button>
-   </div>
+   </div> -->
 </section>
 <script>
 jQuery(function($){
